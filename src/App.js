@@ -173,48 +173,102 @@ function GoalInput({handleAdd}) {
   }
 
   return (
-    <div className="">
-      <div className=" text-center mt-5">
-        <h2>What's Your Goal ?</h2>
-        <form onSubmit={handleSubmit}>
-          <label className="d-flex justify-content-center mt-3 ms-4">
-            <input 
-            value={goalName}
-            onChange={(e)=>setGoalName(e.target.value)}
-              placeholder="Type Goal Here..."
-              className="form-control w-25  me-0 d-block"
-              type="text"
-            /></label>
+    // <div className="">
+    //   <div className=" text-center mt-5">
+    //     <h2>What's Your Goal ?</h2>
+    //     <form onSubmit={handleSubmit} className="">
+    //       <label className="d-flex justify-content-center mt-3 ms-4">
+    //         <input 
+    //         value={goalName}
+    //         onChange={(e)=>setGoalName(e.target.value)}
+    //           placeholder="Type Goal Here..."
+    //           className="form-control w-25  me-0 d-block"
+    //           type="text"
+    //         /></label>
           
-          <label className="d-flex justify-content-center mt-3 ms-4">
-            <input 
-            value={goalDesc}
-            onChange={(e)=>setGoalDesc(e.target.value)}
-              placeholder="Type Description..."
-              className="form-control w-25  me-0 d-block"
-              type="text"
-            /></label>
-          <button type="submit " className="btn btn-success mx-3 my-2 px-4">ADD</button>
+    //       <label className="d-flex justify-content-center mt-3 ms-4">
+    //         <input 
+    //         value={goalDesc}
+    //         onChange={(e)=>setGoalDesc(e.target.value)}
+    //           placeholder="Type Description..."
+    //           className="form-control w-25  me-0 d-block"
+    //           type="text"
+    //         /></label>
+    //       <button type="submit " className="btn btn-success mx-3 my-2 px-4">ADD</button>
           
-        </form>
-      </div>
-    </div>
+    //     </form>
+    //   </div>
+    // </div>
+    <div className="container">
+  <div className="text-center mt-5">
+    <h2>What's Your Goal?</h2>
+    <form onSubmit={handleSubmit} className="mt-4">
+      <label className="d-flex justify-content-center mt-3">
+        <input 
+          value={goalName}
+          onChange={(e) => setGoalName(e.target.value)}
+          placeholder="Type Goal Here..."
+          className="form-control w-75 w-md-50"
+          type="text"
+        />
+      </label>
+      
+      <label className="d-flex justify-content-center mt-3">
+        <input 
+          value={goalDesc}
+          onChange={(e) => setGoalDesc(e.target.value)}
+          placeholder="Type Description..."
+          className="form-control w-75 w-md-50"
+          type="text"
+        />
+      </label>
+      
+      <button 
+        type="submit" 
+        className="btn btn-success mx-auto my-3 px-4"
+      >
+        ADD
+      </button>
+    </form>
+  </div>
+</div>
+
   );
 }
 
 function ButtonSection({ handleGoalList, handlePriority, handleCompleted }) {
   return (
-    <div className="d-flex justify-content-evenly mt-5 bg-light shadow-lg rounded px-5 py-4">
-      <Button onClick={handleGoalList} bg={"btn btn-primary "}>
+      // <div className="d-flex justify-content-evenly mt-5 bg-light shadow-lg rounded px-5 py-4">
+      //   <Button onClick={handleGoalList} bg={"btn btn-primary "} >
+      //     Goal List
+      //   </Button>
+      //   <Button onClick={handlePriority} bg={"btn btn-danger"}>
+      //     Priority Based
+      //   </Button>
+      //   <Button onClick={handleCompleted} bg={"btn btn-success"}>
+      //     Completed
+      //   </Button>
+      // </div>
+      <div className="container mt-5 bg-light shadow-lg rounded px-3 py-4">
+  <div className="d-flex row justify-content-center gap-1 gap-md-0">
+    <div className="col-3 col-md-auto text-center">
+      <Button onClick={handleGoalList} bg={"btn btn-primary"}>
         Goal List
       </Button>
+    </div>
+    <div className="col-3 col-md-auto text-center">
       <Button onClick={handlePriority} bg={"btn btn-danger"}>
         Priority Based
       </Button>
+    </div>
+    <div className="col-5 ms-2 mt-2 mt-md-0 col-md-auto text-center">
       <Button onClick={handleCompleted} bg={"btn btn-success"}>
         Completed
       </Button>
     </div>
+  </div>
+</div>
+
   );
 }
 

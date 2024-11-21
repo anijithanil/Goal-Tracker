@@ -275,7 +275,7 @@ function ButtonSection({ handleGoalList, handlePriority, handleCompleted }) {
 function GoalList({ goals, goalList, priority, completed,handleRemove,handleTogglePriority,handlePercentage }) {
   const unCompleted = [];
   return (
-    <div className="d-flex justify-content-between flex-wrap">
+    <div className="d-flex justify-content-between flex-wrap text-center">
       {goalList === true &&
         goals
           .filter((goal) => goal.completed !== true)

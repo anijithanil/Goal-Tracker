@@ -201,7 +201,7 @@ function GoalInput({handleAdd}) {
     // </div>
     <div className="container">
   <div className="text-center mt-5">
-    <h2>What's Your Goal?</h2>
+    <h2>Hey My Dear Aishu😊 What's Your Goal?</h2>
     <form onSubmit={handleSubmit} className="mt-4">
       <label className="d-flex justify-content-center mt-3">
         <input 
@@ -275,7 +275,7 @@ function ButtonSection({ handleGoalList, handlePriority, handleCompleted }) {
 function GoalList({ goals, goalList, priority, completed,handleRemove,handleTogglePriority,handlePercentage }) {
   const unCompleted = [];
   return (
-    <div className="d-flex justify-content-between flex-wrap text-center">
+    <div className="d-flex col-md-justify-content-between justify-content-center flex-wrap ">
       {goalList === true &&
         goals
           .filter((goal) => goal.completed !== true)
